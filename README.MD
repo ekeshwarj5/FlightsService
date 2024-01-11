@@ -19,3 +19,41 @@ Lets take a look inside the src folder
 
 * `utils` -> contains helper methods, error classes etc.
 
+### Setup the project
+
+- Download this template from github and open it in your favourite text editor.
+- In the root directory create a `.env` file and add the following env variables.
+    ```
+        PORT = <PORT number of your choice>
+    ```
+- Inside the `src/config` create a file named as `config.json` and write the following code:
+    
+    ```
+        {
+            "development": {
+                "username": "root",
+                "password": null,
+                "database": "database_development",
+                "host": "127.0.0.1",
+                "dialect": "mysql"
+            },
+            "test": {
+                "username": "root",
+                "password": null,
+                "database": "database_test",
+                "host": "127.0.0.1",
+                "dialect": "mysql"
+            },
+            "production": {
+                "username": "root",
+                "password": null,
+                "database": "database_production",
+                "host": "127.0.0.1",
+                "dialect": "mysql"
+            }
+        }
+
+    ```
+
+- If your are setting up your development environment, then write the username of your db, pass of your db and in dilect whatever db you are using.
+
