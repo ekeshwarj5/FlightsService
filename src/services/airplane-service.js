@@ -16,9 +16,10 @@ async function createAirplane(data){
                 explanation.push(err.message);
             })
 
-            throw new AppError('Cannot create a new Airplane object',StatusCodes.INTERNAL_SERVER_ERROR);
+            throw new AppError('Cannot create a new Airplane object',StatusCodes.BAD_REQUEST);
+            
         }
-        throw new AppError('Cannot create a new Airplane object',StatusCodes.BAD_REQUEST);
+        throw new AppError('Cannot create a new Airplane object',StatusCodes.INTERNAL_SERVER_ERROR);
     }
 } 
 
