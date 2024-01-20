@@ -5,9 +5,13 @@ const { CityMiddlewares } = require('../../middlewares')
 
 const router  = express.Router();
 
+router.get('/',  CityController.getCities);
+
 router.post('/',
     CityMiddlewares.validateCreateRequest,
     CityController.createCity);
+
+router.delete('/:id',  CityController.destroyCity);
 
 
 
